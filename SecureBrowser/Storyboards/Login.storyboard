@@ -54,6 +54,7 @@
                     <connections>
                         <outlet property="dotRow" destination="WOd-cN-Pl6" id="sup-VK-B0e"/>
                         <outlet property="numberPadPlaceholder" destination="WHb-E3-fDx" id="ktC-L9-Dni"/>
+                        <outlet property="pinLabel" destination="Mp5-qn-raf" id="is1-bE-Ivp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSr-4A-Rky" userLabel="First Responder" sceneMemberID="firstResponder"/>
