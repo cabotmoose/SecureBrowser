@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bFC-RY-4pm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Landing View Controller-->
+        <scene sceneID="DfQ-hd-SJW">
+            <objects>
+                <viewController id="bFC-RY-4pm" customClass="LandingViewController" customModule="SecureBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v6S-Nv-9om">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter PIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp5-qn-raf">
+                                <rect key="frame" x="16" y="35" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOd-cN-Pl6" customClass="DotRow" customModule="SecureBrowser" customModuleProvider="target">
+                                <rect key="frame" x="72" y="85.5" width="230" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="SJD-Vv-efd"/>
+                                    <constraint firstAttribute="height" constant="35" id="aYa-cN-9uI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHb-E3-fDx">
+                                <rect key="frame" x="44" y="140.5" width="287" height="426.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WOd-cN-Pl6" firstAttribute="top" secondItem="Mp5-qn-raf" secondAttribute="bottom" constant="30" id="8CK-m4-ARf"/>
+                            <constraint firstItem="Jur-Gw-rge" firstAttribute="bottom" secondItem="WHb-E3-fDx" secondAttribute="bottom" constant="100" id="C6W-09-a8f"/>
+                            <constraint firstItem="WHb-E3-fDx" firstAttribute="leading" secondItem="Jur-Gw-rge" secondAttribute="leading" constant="44" id="CKT-W0-E2o"/>
+                            <constraint firstItem="Jur-Gw-rge" firstAttribute="trailing" secondItem="WHb-E3-fDx" secondAttribute="trailing" constant="44" id="FQE-OG-jwn"/>
+                            <constraint firstItem="WOd-cN-Pl6" firstAttribute="centerX" secondItem="Mp5-qn-raf" secondAttribute="centerX" id="Hhq-Xv-SLn"/>
+                            <constraint firstItem="Mp5-qn-raf" firstAttribute="top" secondItem="Jur-Gw-rge" secondAttribute="top" constant="15" id="Jxg-wK-1QP"/>
+                            <constraint firstItem="WHb-E3-fDx" firstAttribute="top" secondItem="WOd-cN-Pl6" secondAttribute="bottom" constant="20" id="TSm-zx-lri"/>
+                            <constraint firstItem="Mp5-qn-raf" firstAttribute="leading" secondItem="Jur-Gw-rge" secondAttribute="leading" constant="16" id="iE4-lK-4P5"/>
+                            <constraint firstItem="Jur-Gw-rge" firstAttribute="trailing" secondItem="Mp5-qn-raf" secondAttribute="trailing" constant="16" id="rDr-b8-Jbz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jur-Gw-rge"/>
+                    </view>
+                    <connections>
+                        <outlet property="dotRow" destination="WOd-cN-Pl6" id="sup-VK-B0e"/>
+                        <outlet property="numberPadPlaceholder" destination="WHb-E3-fDx" id="ktC-L9-Dni"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vSr-4A-Rky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.8" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
