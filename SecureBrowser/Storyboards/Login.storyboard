@@ -36,6 +36,16 @@
                                 <rect key="frame" x="44" y="140.5" width="287" height="426.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5d-DF-89K">
+                                <rect key="frame" x="162.5" y="592" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3N9-Hc-Dy4"/>
+                                    <constraint firstAttribute="height" constant="50" id="uWH-ma-xCM"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="biometricButtonTapped:" destination="bFC-RY-4pm" eventType="touchUpInside" id="MQB-nS-jkl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -46,12 +56,15 @@
                             <constraint firstItem="WOd-cN-Pl6" firstAttribute="centerX" secondItem="Mp5-qn-raf" secondAttribute="centerX" id="Hhq-Xv-SLn"/>
                             <constraint firstItem="Mp5-qn-raf" firstAttribute="top" secondItem="Jur-Gw-rge" secondAttribute="top" constant="15" id="Jxg-wK-1QP"/>
                             <constraint firstItem="WHb-E3-fDx" firstAttribute="top" secondItem="WOd-cN-Pl6" secondAttribute="bottom" constant="20" id="TSm-zx-lri"/>
+                            <constraint firstItem="F5d-DF-89K" firstAttribute="centerX" secondItem="Jur-Gw-rge" secondAttribute="centerX" id="bxS-0m-B7g"/>
                             <constraint firstItem="Mp5-qn-raf" firstAttribute="leading" secondItem="Jur-Gw-rge" secondAttribute="leading" constant="16" id="iE4-lK-4P5"/>
+                            <constraint firstItem="Jur-Gw-rge" firstAttribute="bottom" secondItem="F5d-DF-89K" secondAttribute="bottom" constant="25" id="klU-XU-30y"/>
                             <constraint firstItem="Jur-Gw-rge" firstAttribute="trailing" secondItem="Mp5-qn-raf" secondAttribute="trailing" constant="16" id="rDr-b8-Jbz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jur-Gw-rge"/>
                     </view>
                     <connections>
+                        <outlet property="biometricButton" destination="F5d-DF-89K" id="q7k-cQ-Sw1"/>
                         <outlet property="dotRow" destination="WOd-cN-Pl6" id="sup-VK-B0e"/>
                         <outlet property="numberPadPlaceholder" destination="WHb-E3-fDx" id="ktC-L9-Dni"/>
                         <outlet property="pinLabel" destination="Mp5-qn-raf" id="is1-bE-Ivp"/>

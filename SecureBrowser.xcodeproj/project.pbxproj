@@ -18,8 +18,6 @@
 		7E579899202A31CA007F8AA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E579897202A31CA007F8AA8 /* LaunchScreen.storyboard */; };
 		7E5798A5202A49FF007F8AA8 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5798A4202A49FF007F8AA8 /* KeychainPasswordItem.swift */; };
 		7E5798A7202A4A3D007F8AA8 /* BiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5798A6202A4A3D007F8AA8 /* BiometricAuthentication.swift */; };
-		7E5798A9202A52F3007F8AA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5798A8202A52F3007F8AA8 /* LoginViewController.swift */; };
-		7E71915D20325CA6003254C6 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E71915C20325CA6003254C6 /* CALayer.swift */; };
 		7E71915F20325CD0003254C6 /* NumberKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E71915E20325CD0003254C6 /* NumberKey.swift */; };
 		7E71916120327588003254C6 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E71916020327588003254C6 /* NumberPadView.swift */; };
 /* End PBXBuildFile section */
@@ -38,8 +36,6 @@
 		7E57989A202A31CA007F8AA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E5798A4202A49FF007F8AA8 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		7E5798A6202A4A3D007F8AA8 /* BiometricAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthentication.swift; sourceTree = "<group>"; };
-		7E5798A8202A52F3007F8AA8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		7E71915C20325CA6003254C6 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		7E71915E20325CD0003254C6 /* NumberKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberKey.swift; sourceTree = "<group>"; };
 		7E71916020327588003254C6 /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,7 +54,6 @@
 		7E4F25412031E42900B7AF09 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7E5798A8202A52F3007F8AA8 /* LoginViewController.swift */,
 				7E4F25422031E44200B7AF09 /* BrowserViewController.swift */,
 				7E4F254E2032266600B7AF09 /* LandingViewController.swift */,
 			);
@@ -123,7 +118,6 @@
 		7E57988D202A31CA007F8AA8 /* SecureBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				7E71915B20325C88003254C6 /* Extensions */,
 				7E4F254920321B5F00B7AF09 /* Views */,
 				7E4F25462032167700B7AF09 /* Storyboards */,
 				7E57989A202A31CA007F8AA8 /* Info.plist */,
@@ -132,14 +126,6 @@
 				7E4F25412031E42900B7AF09 /* View Controllers */,
 			);
 			path = SecureBrowser;
-			sourceTree = "<group>";
-		};
-		7E71915B20325C88003254C6 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				7E71915C20325CA6003254C6 /* CALayer.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,9 +207,7 @@
 				7E5798A7202A4A3D007F8AA8 /* BiometricAuthentication.swift in Sources */,
 				7E71916120327588003254C6 /* NumberPadView.swift in Sources */,
 				7E4F25432031E44200B7AF09 /* BrowserViewController.swift in Sources */,
-				7E5798A9202A52F3007F8AA8 /* LoginViewController.swift in Sources */,
 				7E5798A5202A49FF007F8AA8 /* KeychainPasswordItem.swift in Sources */,
-				7E71915D20325CA6003254C6 /* CALayer.swift in Sources */,
 				7E4F255120322E5100B7AF09 /* DotRow.swift in Sources */,
 				7E4F254D20321D1700B7AF09 /* Dot.swift in Sources */,
 			);

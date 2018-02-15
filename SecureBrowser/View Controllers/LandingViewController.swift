@@ -12,7 +12,8 @@ class LandingViewController: UIViewController {
 	@IBOutlet weak var dotRow: DotRow!
 	@IBOutlet weak var numberPadPlaceholder: UIView!
 	@IBOutlet weak var pinLabel: UILabel!
-	var biometricButton:UIButton!
+	@IBOutlet weak var biometricButton: UIButton!
+	
 	
 	let biometricAuth = BiometricIDAuth()
 	private let serviceName = "SecureBrowser"
@@ -42,9 +43,16 @@ class LandingViewController: UIViewController {
 		numPad.backgroundColor = UIColor.clear
 		view.addSubview(numPad)
 		
-//		if biometricAuth.canEvaluatePolicy() {
-//			setupBiometricButton()
-//		}
+		// Setup biometricButton
+		if biometricAuth.canEvaluatePolicy() && !newAccount {
+			biometricButton.isHidden = false
+			switch biometricAuth.biometricType() {
+			case .faceID:
+				biometricButton.setImage(UIImage(named: "FaceIcon"), for: .normal)
+			default:
+				biometricButton.setImage(UIImage(named: "Touch-icon-lg"), for: .normal)
+			}
+		}
 	}
 	
 	func segueToBrowser() {
@@ -53,21 +61,7 @@ class LandingViewController: UIViewController {
 		self.show(vc, sender: self)
 	}
 	
-	func setupBiometricButton() {
-		let biometricButtonFrame = CGRect(x: numberPadPlaceholder.frame.origin.x, y: (numberPadPlaceholder.frame.size.height/4)*3, width: numberPadPlaceholder.frame.size.width/3, height: numberPadPlaceholder.frame.size.height/4)
-		biometricButton = UIButton(frame: biometricButtonFrame)
-		biometricButton.addTarget(self, action: #selector(LandingViewController.biometricButtonTapped(_:)), for: .touchUpInside)
-		
-		switch biometricAuth.biometricType() {
-		case .faceID:
-			biometricButton.setImage(UIImage(named: "FaceIcon"), for: .normal)
-		default:
-			biometricButton.setImage(UIImage(named: "Touch-icon-lg"), for: .normal)
-		}
-		view.addSubview(biometricButton)
-	}
-	
-	@objc func biometricButtonTapped(_ sender: Any) {
+	@IBAction func biometricButtonTapped(_ sender: Any) {
 		biometricAuth.authenticateUser() { [weak self] message in
 			if let message = message {
 				let alertView = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
@@ -78,22 +72,6 @@ class LandingViewController: UIViewController {
 				self?.segueToBrowser()
 			}
 		}
-	}
-	
-	@objc func buttonPressed(_ sender:UIButton) {
-		print("Button pressed")
-	}
-	
-	func incrementTapped() {
-		guard currentDot > 0 else {
-			segueToBrowser()
-//			dotRow.clearDots()
-//			currentDot = 4
-			return
-		}
-		
-		dotRow.selectDot(at: currentDot)
-		currentDot -= 1
 	}
 	
 	//MARK: Private methods
@@ -122,7 +100,6 @@ class LandingViewController: UIViewController {
 extension LandingViewController: NumberPadViewDelegate {
 	func didPressNumber(number: Int) {
 		pinEntry.append("\(number)")
-		print("pinEntry: \(pinEntry)")
 		dotRow.selectDot(at: currentDot)
 		currentDot -= 1
 		

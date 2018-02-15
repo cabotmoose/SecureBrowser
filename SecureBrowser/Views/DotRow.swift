@@ -12,6 +12,8 @@ class DotRow: UIView {
 	let numberOfDots:Int
 	var dotArray:[Dot] = []
 	
+	private var selectedDot = 0
+	
 	init(frame: CGRect, numberOfDots:Int = 4) {
 		self.numberOfDots = numberOfDots
 		super.init(frame: frame)
@@ -40,7 +42,8 @@ class DotRow: UIView {
 	}
 	
 	func selectDot(at row:Int) {
-		dotArray[row - 1].isSelected = true
+		dotArray[selectedDot].isSelected = true
+		selectedDot += 1
 	}
 	
 	func clearDots() {
